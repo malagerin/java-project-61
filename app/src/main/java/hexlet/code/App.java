@@ -11,7 +11,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         String usrName = ""; // Cli.helloUser();
         int res = 10;
-        String[] mainMenu = {"Greet"};
+        String[] mainMenu = {"Greet", "Even"};
 
         while (res != 0) {
             res = Cli.outputMenu(mainMenu,
@@ -22,6 +22,9 @@ public class App {
             switch (res) {
                 case 1:
                     Cli.helloUser();
+                    break;
+                case 2:
+                    Even.game();
                     break;
                 default:
                     break;
