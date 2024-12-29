@@ -1,5 +1,15 @@
+/**
+ * @file Even.java
+ * @author AF/Malagerin
+ * @brief "game2" file.
+ *
+ * "Even" "game" is the process where question about oddity of random number are asked.
+ * Only 3 correct answers grant an exit from the game.
+ * If answer is spelled incorrectly(e.g. 'y' instead of 'yes'), it counts as incorrect.
+ */
+
+
 package hexlet.code;
-//import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
