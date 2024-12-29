@@ -1,5 +1,5 @@
 {"version": 2, "width": 80, "height": 24, "timestamp": 1735428966, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
-[0.031248, "o", "\u001b[?2004h\u001b]0;alex@LxLaptop: ~/training/java-project-61/app\u0007\u001b[01;32malex@LxLaptop\u001b[00m:\u001b[01;34m~/training/java-project-61/app\u001b[00m$ "]
+[0.031248, "o", "\u001b[?2004h\u001b]0;$: ~/training/java-project-61/app\u0007\u001b[01;32m$\u001b[00m:\u001b[01;34m~/training/java-project-61/app\u001b[00m$ "]
 [1.483761, "o", "m"]
 [1.635344, "o", "a"]
 [1.729291, "o", "k"]
@@ -72,7 +72,7 @@
 [18.468041, "o", "Your choice is: "]
 [20.66412, "o", "0"]
 [21.078808, "o", "\r\n"]
-[21.096133, "o", "\u001b[?2004h\u001b]0;alex@LxLaptop: ~/training/java-project-61/app\u0007\u001b[01;32malex@LxLaptop\u001b[00m:\u001b[01;34m~/training/java-project-61/app\u001b[00m$ "]
+[21.096133, "o", "\u001b[?2004h\u001b]0;$: ~/training/java-project-61/app\u0007\u001b[01;32m$\u001b[00m:\u001b[01;34m~/training/java-project-61/app\u001b[00m$ "]
 [23.268589, "o", "e"]
 [23.58506, "o", "x"]
 [23.805503, "o", "i"]
