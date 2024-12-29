@@ -11,7 +11,9 @@
 
 
 package hexlet.code;
+
 import java.util.Scanner;
+import hexlet.code.games.*;
 
 public class App {
 
