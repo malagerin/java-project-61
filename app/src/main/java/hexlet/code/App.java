@@ -22,7 +22,11 @@ public class App {
 
         Scanner sc = new Scanner(System.in); //input
         int res = 10;   //menu result storage
-        String[] mainMenu = {"Greet", "Even"}; //menu items storage
+        String[] mainMenu = {
+                "Greet",
+                "Even",
+                "Calc"
+        }; //menu items storage
 
         if (onlyCorrectRoundsAreTakenIntoAccount) {
             Engine.onlyCorrectCounts();
@@ -43,6 +47,9 @@ public class App {
                     break;
                 case 2:
                     Engine.runGame(new Even());
+                    break;
+                case 3:
+                    Engine.runGame(new Calc());
                     break;
                 default:
                     //No defaults for now
