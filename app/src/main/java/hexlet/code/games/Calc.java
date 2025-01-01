@@ -9,26 +9,26 @@ public final class Calc extends GameDummy {
 
     @Override
     public String getNextQuestion() {
-        int num1 = rnd.nextInt(100);
-        int num2 = rnd.nextInt(100);
-        int action = rnd.nextInt(3);
+        int num1 = rnd().nextInt(100);
+        int num2 = rnd().nextInt(100);
+        int action = rnd().nextInt(3);
         String question = "";
 
         switch (action) {
             case 0:
                 //addition
                 question = num1 + " + " + num2;
-                correct = Integer.toString(num1 + num2);
+                setCorrect(Integer.toString(num1 + num2));
                 break;
             case 1:
                 //subtraction
                 question = num1 + " - " + num2;
-                correct = Integer.toString(num1 - num2);
+                setCorrect(Integer.toString(num1 - num2));
                 break;
             case 2:
                 //multiplication
                 question = num1 + " * " + num2;
-                correct = Integer.toString(num1 * num2);
+                setCorrect(Integer.toString(num1 * num2));
                 break;
             default:
                 //no defaults
