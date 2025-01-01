@@ -8,8 +8,6 @@ build/
 *.cast
 
 ### misc ###
-gradle/
-gradle/wrapped
 .idea/
 gradlew
 gradlew.bat
