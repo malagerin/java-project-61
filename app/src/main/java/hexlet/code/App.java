@@ -70,7 +70,7 @@ public class App {
                     break;
             }
 
-        break; //why in the Force do Hexlet need one run only?!
+            break; //why in the Force do Hexlet need one run only?!
         }
 
         //Closing input stream

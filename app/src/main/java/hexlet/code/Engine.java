@@ -33,6 +33,8 @@ public class Engine {
         String expectedAnswer;
         String userAnswer;
 
+        System.out.println(game.getPrompt());
+
         while (i-- != 0) {
             System.out.println(questionMessage + " " + game.getNextQuestion());
             expectedAnswer = game.getExpected();
