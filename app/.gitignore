@@ -9,8 +9,6 @@ build/
 
 ### misc ###
 .idea/
-gradlew
-gradlew.bat
 settings.gradle.kts
 
 ### IntelliJ IDEA ###
