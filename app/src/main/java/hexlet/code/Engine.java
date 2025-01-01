@@ -6,14 +6,16 @@ import java.util.Scanner;
 import hexlet.code.games.GameOutput;
 
 public class Engine {
-    public static int correctRoundsExpected = 3;
-    public static int roundsExpected = 3;
-    public static String winMessage = "Congratulations, %s!";
-    public static String loseMessage = "You lose, %s!";
-    public static String questionMessage = "Question:";
-    public static String prompt = "Your answer:";
-    public static String correctMessage = "Correct!";
-    public static String incorrectMessage = "'%s' is wrong answer ;(. Correct answer was '%s'";
+
+    //and here comes another unnecessary finals
+    private final static int correctRoundsExpected = 3;
+    private static int roundsExpected = 3;
+    private final static String winMessage = "Congratulations, %s!";
+    private final static String loseMessage = "You lose, %s!";
+    private final static String questionMessage = "Question:";
+    private final static String prompt = "Your answer:";
+    private final static String correctMessage = "Correct!";
+    private final static String incorrectMessage = "'%s' is wrong answer ;(. Correct answer was '%s'";
 
     public static void onlyCorrectCounts() {
         roundsExpected = correctRoundsExpected; //Integer.MAX_VALUE - 1;
