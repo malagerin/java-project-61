@@ -9,7 +9,6 @@ build/
 
 ### misc ###
 .idea/
-settings.gradle.kts
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
