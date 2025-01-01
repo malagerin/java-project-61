@@ -18,7 +18,8 @@ public final class Even extends GameDummy {
 
     @Override
     public String getNextQuestion() {
-        int num = rnd().nextInt(1000);
+        final int MAXNUM = 1000;
+        int num = rnd().nextInt(MAXNUM);
         String question = Integer.toString(num);
         setCorrect(num % 2 == 0 ? "yes" : "no");
 

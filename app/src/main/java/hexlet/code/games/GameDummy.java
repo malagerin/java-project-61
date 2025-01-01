@@ -10,18 +10,18 @@ public abstract class GameDummy implements GameOutput {
     //protected String correct = "";
 
     //idiotic way to do it:
-    private Random _rnd = new Random();
-    protected Random rnd() {
-        return _rnd;
+    private Random rnd_place = new Random();
+    protected final Random rnd() {
+        return rnd_place;
     }
 
     private Scanner _sc = new Scanner(System.in);
-    protected Scanner sc() {
+    protected final Scanner sc() {
         return _sc;
     }
 
     private String correct = "";
-    protected void setCorrect(String corr) {
+    protected final void setCorrect(String corr) {
         correct = corr;
     }
 
@@ -29,7 +29,7 @@ public abstract class GameDummy implements GameOutput {
     public abstract String getNextQuestion();
 
     @Override
-    public String getExpected() {
+    public final String getExpected() {
         return correct;
     }
 }

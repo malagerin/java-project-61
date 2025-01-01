@@ -8,9 +8,18 @@ public final class Progression extends GameDummy {
 
     @Override
     public String getNextQuestion() {
-        int start = rnd().nextInt(20);
-        int step = rnd().nextInt(-10, 20);
-        int length = rnd().nextInt(5, 20);
+
+        //and another block added due to "excellent" checkstyle
+        //while the numbers are just random bounds, not anything more.
+        final int START_UP_TO = 20;
+        final int STEP_FROM = -10;
+        final int STEP_TO = 20;
+        final int LEN_FROM = 5;
+        final int LEN_TO = 20;
+
+        int start = rnd().nextInt(START_UP_TO);
+        int step = rnd().nextInt(STEP_FROM, STEP_TO);
+        int length = rnd().nextInt(LEN_FROM, LEN_TO);
         int missing = rnd().nextInt(length);
         StringBuilder question = new StringBuilder("");
 

@@ -12,9 +12,13 @@ public final class Prime extends GameDummy {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
+
     @Override
     public String getNextQuestion() {
-        int num = rnd().nextInt(2, 100);
+        final int rnd_low = 2;
+        final int rnd_high = 100;
+
+        int num = rnd().nextInt(rnd_low, rnd_high);
 
         setCorrect("no");
         for (int x : primelist) {
