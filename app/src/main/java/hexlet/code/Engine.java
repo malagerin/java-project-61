@@ -47,6 +47,8 @@ public class Engine {
                 correctRounds++;
             } else {
                 System.out.printf(incorrectMessage + "\n", userAnswer, expectedAnswer);
+                //wtf. Wrong answer just stops the game? Hexlet's strange.
+                return;
             }
 
             if (correctRounds == correctRoundsExpected) {
