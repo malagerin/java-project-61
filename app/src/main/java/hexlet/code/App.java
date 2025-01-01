@@ -20,7 +20,7 @@ import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
 
 public class App {
-    public static boolean onlyCorrectRounds = false;
+    public static boolean onlyCorrectRounds = true;
 
     public static void main(String[] args) {
 
@@ -63,8 +63,10 @@ public class App {
                     break;
                 case 5:
                     Engine.runGame(new Progression());
+                    break;
                 case 6:
                     Engine.runGame(new Prime());
+                    break;
                 default:
                     //No defaults for now
                     break;

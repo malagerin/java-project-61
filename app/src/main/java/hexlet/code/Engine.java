@@ -16,7 +16,7 @@ public class Engine {
     public static String incorrectMessage = "'%s' is wrong answer ;(. Correct answer was '%s'";
 
     public static void onlyCorrectCounts() {
-        roundsExpected = Integer.MAX_VALUE;
+        roundsExpected = correctRoundsExpected; //Integer.MAX_VALUE - 1;
     }
 
     public static void runGame(GameOutput game) {
@@ -47,7 +47,7 @@ public class Engine {
                 correctRounds++;
             } else {
                 System.out.printf(incorrectMessage + "\n", userAnswer, expectedAnswer);
-                //wtf. Wrong answer just stops the game? Hexlet's strange.
+                //wtf. Wrong answer just stops the game?
                 System.out.println("Let's try again, " + usr + "!");
                 return;
             }
