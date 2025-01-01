@@ -8,3 +8,6 @@ Game "2 - Even":
 Game "4 - CGD"  
 [![asciicast](https://asciinema.org/a/LkDdxbiVL1iTlN2I8TSP3f6vx.svg)](https://asciinema.org/a/LkDdxbiVL1iTlN2I8TSP3f6vx)  
 
+Game "5 - Progression":  
+[![asciicast](https://asciinema.org/a/qhOyJS8RXczJADsfkVvkasN9H.svg)](https://asciinema.org/a/qhOyJS8RXczJADsfkVvkasN9H)  
+  
