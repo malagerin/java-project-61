@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-public class Progression extends GameDummy {
+public final class Progression extends GameDummy {
     @Override
     public String getPrompt() {
         return "What number is missing in the progression?";

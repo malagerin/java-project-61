@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-public class GCD extends GameDummy {
+public final class GCD extends GameDummy {
     @Override
     public String getPrompt() {
         return "Find the greatest common divisor of given numbers.";

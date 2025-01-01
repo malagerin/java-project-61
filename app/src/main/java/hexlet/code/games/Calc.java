@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-public class Calc extends GameDummy {
+public final class Calc extends GameDummy {
     @Override
 
     public String getPrompt() {

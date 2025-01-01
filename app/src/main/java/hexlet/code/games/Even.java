@@ -10,7 +10,7 @@
 
 package hexlet.code.games;
 
-public class Even extends GameDummy {
+public final class Even extends GameDummy {
     @Override
     public String getPrompt() {
         return "Answer 'yes' if the number is even, otherwise answer 'no'.";
