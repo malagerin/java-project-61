@@ -26,14 +26,14 @@ public class Engine {
 			throw e;
 		}
 
-		i = roundsExpected;
+		int i = roundsExpected;
 
 		Scanner sc = new Scanner(System.in);
 		String usr = Cli.helloUser();
 		int correctRounds = 0;
 		String expectedAnswer, userAnswer;
 
-		while (i--) {
+		while (i-- != 0) {
 			System.out.println(Game.getNextQuestion());
 			expectedAnswer = Game.getExpected();
 
@@ -44,11 +44,12 @@ public class Engine {
 				System.out.println(correctMessage);
 				correctRounds++;
 			} else {
-				System.out.printf(incorrectMessage, userAnswer, expectedAnswer);
+				System.out.printf(incorrectMessage + "\n", userAnswer, expectedAnswer);
 			}
 
 			if (correctRounds == correctRoundsExpected) {
 				System.out.printf(winMessage + "\n", usr);
+				return;
 			}
 		}
 

@@ -16,12 +16,17 @@ import java.util.Scanner;
 import hexlet.code.games.*;
 
 public class App {
+    public static final boolean onlyCorrectRoundsAreTakenIntoAccount = false;
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in); //input
         int res = 10;   //menu result storage
         String[] mainMenu = {"Greet", "Even"}; //menu items storage
+
+        if (onlyCorrectRoundsAreTakenIntoAccount) {
+            Engine.onlyCorrectCounts();
+        }
 
         //Exit is provided only when input is '0'
         while (res != 0) {
@@ -37,7 +42,7 @@ public class App {
                     Cli.helloUser(); //greeting
                     break;
                 case 2:
-                    Even.game(); //game #2
+                    Engine.runGame(new Even());
                     break;
                 default:
                     //No defaults for now

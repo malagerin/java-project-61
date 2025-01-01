@@ -1,6 +1,8 @@
 package hexlet.code.games;
 
 public interface GameOutput {
-	public String getNextQuestion();
-	public String getExpected();
+	String getPrompt();
+
+	String getNextQuestion();
+	String getExpected();
 }

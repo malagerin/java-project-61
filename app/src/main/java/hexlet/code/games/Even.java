@@ -8,40 +8,33 @@
  * If answer is spelled incorrectly(e.g. 'y' instead of 'yes'), it counts as incorrect.
  */
 
-
 package hexlet.code.games;
+
 import java.util.Random;
 import java.util.Scanner;
 
-public class Even {
-    public static void game() {
-        Scanner sc = new Scanner(System.in);
+public class Even implements GameOutput {
 
-        String usrName = Cli.helloUser();
+    private Random rnd = new Random();
+    private Scanner sc = new Scanner(System.in);
+    private String correct = "";
 
-        int correct = 0, num = 0;
-        String ans = "";
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+    @Override
+    public String getPrompt() {
+        return "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    }
 
-        Random rnd = new Random();
-        while (correct < 3) {
+    @Override
+    public String getNextQuestion() {
+        int num = rnd.nextInt(1000);
+        String question = "Question: " + num;
+        correct = num % 2 == 0? "yes" : "no";
 
-            num = rnd.nextInt(1000);
-            System.out.println("Question: " + num);
-            System.out.print("Your answer: ");
-            ans = sc.next();
+        return question;
+    }
 
-            if ((ans.equals("no") && (num % 2 == 1)) ||
-                    (ans.equals("yes") && (num % 2 == 0))) {
-                correct++;
-                System.out.println("Correct!");
-            }
-            else {
-                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'\n",
-                        ans, num % 2 == 0? "yes" : "no");
-            }
-        }
-
-        System.out.println("Congratulations, " + usrName + "!");
+    @Override
+    public String getExpected() {
+        return correct;
     }
 }
