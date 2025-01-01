@@ -20,7 +20,7 @@ import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
 
 public class App {
-    public static boolean onlyCorrectRounds = true;
+    //private static boolean onlyCorrectRounds = true;
 
     public static void main(String[] args) {
 
@@ -35,9 +35,15 @@ public class App {
             "Prime"
         }; //menu items storage
 
-        if (onlyCorrectRounds) {
-            Engine.onlyCorrectCounts();
-        }
+        final int menuGreet = 1;
+        final int menuEven = 2;
+        final int menuCalc = 3;
+        final int menuGCD = 4;
+        final int menuProgr = 5;
+        final int menuPrime = 6;
+        //        if (onlyCorrectRounds) {
+        //            Engine.onlyCorrectCounts();
+        //        }
 
         //Exit is provided only when input is '0'
         while (res != 0) {
@@ -49,22 +55,22 @@ public class App {
 
             //menu following
             switch (res) {
-                case 1:
+                case menuGreet:
                     Cli.helloUser(); //greeting
                     break;
-                case 2:
+                case menuEven:
                     Engine.runGame(new Even());
                     break;
-                case 3:
+                case menuCalc:
                     Engine.runGame(new Calc());
                     break;
-                case 4:
+                case menuGCD:
                     Engine.runGame(new GCD());
                     break;
-                case 5:
+                case menuProgr:
                     Engine.runGame(new Progression());
                     break;
-                case 6:
+                case menuPrime:
                     Engine.runGame(new Prime());
                     break;
                 default:

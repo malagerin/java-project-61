@@ -16,9 +16,9 @@ public final class GCD extends GameDummy {
 
     @Override
     public String getNextQuestion() {
-        final int MAXNUM = 50;
-        int num1 = rnd().nextInt(MAXNUM);
-        int num2 = rnd().nextInt(MAXNUM);
+        final int maxNum = 50;
+        int num1 = rnd().nextInt(maxNum);
+        int num2 = rnd().nextInt(maxNum);
         setCorrect(Integer.toString(gcd(num1, num2)));
         return num1 + " " + num2;
     }

@@ -8,14 +8,14 @@ import hexlet.code.games.GameOutput;
 public class Engine {
 
     //and here comes another unnecessary finals
-    private final static int correctRoundsExpected = 3;
-    private static int roundsExpected = 3;
-    private final static String WIN_MESSAGE = "Congratulations, %s!";
-    private final static String LOSE_MESSAGE = "You lose, %s!";
-    private final static String QUESTION_MESSAGE = "Question:";
-    private final static String PROMPT = "Your answer:";
-    private final static String CORRECT_MESSAGE = "Correct!";
-    private final static String INCORRECT_MESSAGE = "'%s' is wrong answer ;(. Correct answer was '%s'";
+    private static final int correctRoundsExpected = 3;
+    private static int roundsExpected = correctRoundsExpected;
+    private static final String WIN_MESSAGE = "Congratulations, %s!";
+    private static final String LOSE_MESSAGE = "You lose, %s!";
+    private static final String QUESTION_MESSAGE = "Question:";
+    private static final String PROMPT = "Your answer:";
+    private static final String CORRECT_MESSAGE = "Correct!";
+    private static final String INCORRECT_MESSAGE = "'%s' is wrong answer ;(. Correct answer was '%s'";
 
     public static void onlyCorrectCounts() {
         roundsExpected = correctRoundsExpected; //Integer.MAX_VALUE - 1;
