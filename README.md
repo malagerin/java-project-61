@@ -11,3 +11,6 @@ Game "4 - CGD"
 Game "5 - Progression":  
 [![asciicast](https://asciinema.org/a/qhOyJS8RXczJADsfkVvkasN9H.svg)](https://asciinema.org/a/qhOyJS8RXczJADsfkVvkasN9H)  
   
+Game "6 - Prime"  
+[![asciicast](https://asciinema.org/a/6HQniBYTscYxQT2R5gCpm9Yp6.svg)](https://asciinema.org/a/6HQniBYTscYxQT2R5gCpm9Yp6) 
+  

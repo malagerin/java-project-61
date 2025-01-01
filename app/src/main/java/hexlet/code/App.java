@@ -27,7 +27,8 @@ public class App {
                 "Even",
                 "Calc",
                 "GCD",
-                "Progression"
+                "Progression",
+                "Prime"
         }; //menu items storage
 
         if (onlyCorrectRoundsAreTakenIntoAccount) {
@@ -58,6 +59,8 @@ public class App {
                     break;
                 case 5:
                     Engine.runGame(new Progression());
+                case 6:
+                    Engine.runGame(new Prime());
                 default:
                     //No defaults for now
                     break;
