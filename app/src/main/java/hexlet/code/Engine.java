@@ -8,8 +8,8 @@ import hexlet.code.games.GameOutput;
 public class Engine {
 
     //and here comes another unnecessary finals
-    private static final int correctRoundsExpected = 3;
-    private static int roundsExpected = correctRoundsExpected;
+    private static final int CORRECT_ROUNDS_EXPECTED = 3;
+    private static int roundsExpected = CORRECT_ROUNDS_EXPECTED;
     private static final String WIN_MESSAGE = "Congratulations, %s!";
     private static final String LOSE_MESSAGE = "You lose, %s!";
     private static final String QUESTION_MESSAGE = "Question:";
@@ -18,11 +18,11 @@ public class Engine {
     private static final String INCORRECT_MESSAGE = "'%s' is wrong answer ;(. Correct answer was '%s'";
 
     public static void onlyCorrectCounts() {
-        roundsExpected = correctRoundsExpected; //Integer.MAX_VALUE - 1;
+        roundsExpected = CORRECT_ROUNDS_EXPECTED; //Integer.MAX_VALUE - 1;
     }
 
     public static void runGame(GameOutput game) {
-        if (correctRoundsExpected < roundsExpected) {
+        if (CORRECT_ROUNDS_EXPECTED < roundsExpected) {
             InvalidParameterException e = new InvalidParameterException("Rounds are set incorrectly!");
             throw e;
         }
@@ -54,7 +54,7 @@ public class Engine {
                 return;
             }
 
-            if (correctRounds == correctRoundsExpected) {
+            if (correctRounds == CORRECT_ROUNDS_EXPECTED) {
                 System.out.printf(WIN_MESSAGE + "\n", usr);
                 return;
             }
