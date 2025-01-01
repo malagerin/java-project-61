@@ -48,6 +48,7 @@ public class Engine {
             } else {
                 System.out.printf(incorrectMessage + "\n", userAnswer, expectedAnswer);
                 //wtf. Wrong answer just stops the game? Hexlet's strange.
+                System.out.println("Let's try again, " + usr + "!");
                 return;
             }
 
