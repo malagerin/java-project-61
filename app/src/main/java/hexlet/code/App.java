@@ -69,6 +69,8 @@ public class App {
                     //No defaults for now
                     break;
             }
+
+        break; //why in the Force do Hexlet need one run only?!
         }
 
         //Closing input stream
