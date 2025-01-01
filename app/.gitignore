@@ -11,6 +11,9 @@ build/
 gradle/
 gradle/wrapped
 .idea/
+gradlew
+gradlew.bat
+settings.gradle.kts
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
