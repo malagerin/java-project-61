@@ -10,14 +10,14 @@ public abstract class GameDummy implements GameOutput {
     //protected String correct = "";
 
     //idiotic way to do it:
-    private Random rnd_place = new Random();
+    private Random rndPlace = new Random();
     protected final Random rnd() {
-        return rnd_place;
+        return rndPlace;
     }
 
-    private Scanner _sc = new Scanner(System.in);
+    private Scanner scsc = new Scanner(System.in);
     protected final Scanner sc() {
-        return _sc;
+        return scsc;
     }
 
     private String correct = "";

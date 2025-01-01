@@ -9,11 +9,11 @@ public final class Calc extends GameDummy {
 
     @Override
     public String getNextQuestion() {
-        final int MAX_NUM = 100;
-        final int MAX_ACT = 3;
-        int num1 = rnd().nextInt(MAX_NUM);
-        int num2 = rnd().nextInt(MAX_NUM);
-        int action = rnd().nextInt(MAX_ACT);
+        final int maxNum = 100;
+        final int maxAct = 3;
+        int num1 = rnd().nextInt(maxNum);
+        int num2 = rnd().nextInt(maxNum);
+        int action = rnd().nextInt(maxAct);
         String question = "";
 
         switch (action) {

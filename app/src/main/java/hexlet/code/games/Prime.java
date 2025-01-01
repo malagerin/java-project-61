@@ -15,10 +15,10 @@ public final class Prime extends GameDummy {
 
     @Override
     public String getNextQuestion() {
-        final int rnd_low = 2;
-        final int rnd_high = 100;
+        final int rndLow = 2;
+        final int rndHigh = 100;
 
-        int num = rnd().nextInt(rnd_low, rnd_high);
+        int num = rnd().nextInt(rndLow, rndHigh);
 
         setCorrect("no");
         for (int x : primelist) {

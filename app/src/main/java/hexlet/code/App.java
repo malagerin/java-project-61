@@ -25,7 +25,7 @@ public class App {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in); //input
-        int res = 10;   //menu result storage
+        int res = Integer.MAX_VALUE;   //menu result storage
         String[] mainMenu = {
             "Greet",
             "Even",

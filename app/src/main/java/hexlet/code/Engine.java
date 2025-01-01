@@ -10,12 +10,12 @@ public class Engine {
     //and here comes another unnecessary finals
     private final static int correctRoundsExpected = 3;
     private static int roundsExpected = 3;
-    private final static String winMessage = "Congratulations, %s!";
-    private final static String loseMessage = "You lose, %s!";
-    private final static String questionMessage = "Question:";
-    private final static String prompt = "Your answer:";
-    private final static String correctMessage = "Correct!";
-    private final static String incorrectMessage = "'%s' is wrong answer ;(. Correct answer was '%s'";
+    private final static String WIN_MESSAGE = "Congratulations, %s!";
+    private final static String LOSE_MESSAGE = "You lose, %s!";
+    private final static String QUESTION_MESSAGE = "Question:";
+    private final static String PROMPT = "Your answer:";
+    private final static String CORRECT_MESSAGE = "Correct!";
+    private final static String INCORRECT_MESSAGE = "'%s' is wrong answer ;(. Correct answer was '%s'";
 
     public static void onlyCorrectCounts() {
         roundsExpected = correctRoundsExpected; //Integer.MAX_VALUE - 1;
@@ -38,29 +38,29 @@ public class Engine {
         System.out.println(game.getPrompt());
 
         while (i-- != 0) {
-            System.out.println(questionMessage + " " + game.getNextQuestion());
+            System.out.println(QUESTION_MESSAGE + " " + game.getNextQuestion());
             expectedAnswer = game.getExpected();
 
-            System.out.print(prompt + " ");
+            System.out.print(PROMPT + " ");
             userAnswer = sc.next().strip();
 
             if (expectedAnswer.equals(userAnswer)) {
-                System.out.println(correctMessage);
+                System.out.println(CORRECT_MESSAGE);
                 correctRounds++;
             } else {
-                System.out.printf(incorrectMessage + "\n", userAnswer, expectedAnswer);
+                System.out.printf(INCORRECT_MESSAGE + "\n", userAnswer, expectedAnswer);
                 //wtf. Wrong answer just stops the game?
                 System.out.println("Let's try again, " + usr + "!");
                 return;
             }
 
             if (correctRounds == correctRoundsExpected) {
-                System.out.printf(winMessage + "\n", usr);
+                System.out.printf(WIN_MESSAGE + "\n", usr);
                 return;
             }
         }
 
-        System.out.printf(loseMessage + "\n", usr);
+        System.out.printf(LOSE_MESSAGE + "\n", usr);
     }
 
 }

@@ -11,15 +11,15 @@ public final class Progression extends GameDummy {
 
         //and another block added due to "excellent" checkstyle
         //while the numbers are just random bounds, not anything more.
-        final int START_UP_TO = 20;
-        final int STEP_FROM = -10;
-        final int STEP_TO = 20;
-        final int LEN_FROM = 5;
-        final int LEN_TO = 20;
+        final int startUpTo = 20;
+        final int stepFrom = -10;
+        final int stepTo = 20;
+        final int lenFrom = 5;
+        final int lenTo = 20;
 
-        int start = rnd().nextInt(START_UP_TO);
-        int step = rnd().nextInt(STEP_FROM, STEP_TO);
-        int length = rnd().nextInt(LEN_FROM, LEN_TO);
+        int start = rnd().nextInt(startUpTo);
+        int step = rnd().nextInt(stepFrom, stepTo);
+        int length = rnd().nextInt(lenFrom, lenTo);
         int missing = rnd().nextInt(length);
         StringBuilder question = new StringBuilder("");
 
