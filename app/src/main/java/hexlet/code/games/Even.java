@@ -10,15 +10,7 @@
 
 package hexlet.code.games;
 
-import java.util.Random;
-import java.util.Scanner;
-
-public class Even implements GameOutput {
-
-    private Random rnd = new Random();
-    private Scanner sc = new Scanner(System.in);
-    private String correct = "";
-
+public class Even extends GameDummy {
     @Override
     public String getPrompt() {
         return "Answer 'yes' if the number is even, otherwise answer 'no'.";
@@ -31,10 +23,5 @@ public class Even implements GameOutput {
         correct = num % 2 == 0? "yes" : "no";
 
         return question;
-    }
-
-    @Override
-    public String getExpected() {
-        return correct;
     }
 }
