@@ -25,7 +25,8 @@ public class App {
         String[] mainMenu = {
                 "Greet",
                 "Even",
-                "Calc"
+                "Calc",
+                "GCD"
         }; //menu items storage
 
         if (onlyCorrectRoundsAreTakenIntoAccount) {
@@ -50,6 +51,9 @@ public class App {
                     break;
                 case 3:
                     Engine.runGame(new Calc());
+                    break;
+                case 4:
+                    Engine.runGame(new GCD());
                     break;
                 default:
                     //No defaults for now
