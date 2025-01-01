@@ -4,3 +4,7 @@
   
 Game "2 - Even":  
 [![asciicast](https://asciinema.org/a/vq7gT7ndYyssTnsP2tm8JCsaF.svg)](https://asciinema.org/a/vq7gT7ndYyssTnsP2tm8JCsaF)  
+  
+Game "4 - CGD"  
+[![asciicast](https://asciinema.org/a/LkDdxbiVL1iTlN2I8TSP3f6vx.svg)](https://asciinema.org/a/LkDdxbiVL1iTlN2I8TSP3f6vx)  
+
