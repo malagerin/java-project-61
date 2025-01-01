@@ -1,60 +1,60 @@
 package hexlet.code;
 
 import java.security.InvalidParameterException;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import hexlet.code.Cli;
-import hexlet.code.games.*;
+import hexlet.code.games.GameOutput;
 
 public class Engine {
-	public static int correctRoundsExpected = 3;
-	public static int roundsExpected = 3;
-	public static String winMessage = "Congratulations, %s!";
-	public static String loseMessage = "You lose, %s!";
-	public static String questionMessage = "Question:";
-	public static String prompt = "Your answer:";
-	public static String correctMessage = "Correct!";
-	public static String incorrectMessage = "'%s' is wrong answer ;(. Correct answer was '%s'";
+    public static int correctRoundsExpected = 3;
+    public static int roundsExpected = 3;
+    public static String winMessage = "Congratulations, %s!";
+    public static String loseMessage = "You lose, %s!";
+    public static String questionMessage = "Question:";
+    public static String prompt = "Your answer:";
+    public static String correctMessage = "Correct!";
+    public static String incorrectMessage = "'%s' is wrong answer ;(. Correct answer was '%s'";
 
-	public static void onlyCorrectCounts() {
-		roundsExpected = Integer.MAX_VALUE;
-	}
-	
-	public static void runGame(GameOutput Game) {
-		if (correctRoundsExpected < roundsExpected) {
-			InvalidParameterException e = new InvalidParameterException("Rounds are set incorrectly!");
-			throw e;
-		}
+    public static void onlyCorrectCounts() {
+        roundsExpected = Integer.MAX_VALUE;
+    }
 
-		int i = roundsExpected;
+    public static void runGame(GameOutput game) {
+        if (correctRoundsExpected < roundsExpected) {
+            InvalidParameterException e = new InvalidParameterException("Rounds are set incorrectly!");
+            throw e;
+        }
 
-		Scanner sc = new Scanner(System.in);
-		String usr = Cli.helloUser();
-		int correctRounds = 0;
-		String expectedAnswer, userAnswer;
+        int i = roundsExpected;
 
-		while (i-- != 0) {
-			System.out.println(questionMessage + " " + Game.getNextQuestion());
-			expectedAnswer = Game.getExpected();
+        Scanner sc = new Scanner(System.in);
+        String usr = Cli.helloUser();
+        int correctRounds = 0;
+        String expectedAnswer;
+        String userAnswer;
 
-			System.out.print(prompt + " ");
-			userAnswer = sc.next().strip();
+        while (i-- != 0) {
+            System.out.println(questionMessage + " " + game.getNextQuestion());
+            expectedAnswer = game.getExpected();
 
-			if (expectedAnswer.equals(userAnswer)) {
-				System.out.println(correctMessage);
-				correctRounds++;
-			} else {
-				System.out.printf(incorrectMessage + "\n", userAnswer, expectedAnswer);
-			}
+            System.out.print(prompt + " ");
+            userAnswer = sc.next().strip();
 
-			if (correctRounds == correctRoundsExpected) {
-				System.out.printf(winMessage + "\n", usr);
-				return;
-			}
-		}
+            if (expectedAnswer.equals(userAnswer)) {
+                System.out.println(correctMessage);
+                correctRounds++;
+            } else {
+                System.out.printf(incorrectMessage + "\n", userAnswer, expectedAnswer);
+            }
 
-		System.out.printf(loseMessage + "\n", usr);
-	}
+            if (correctRounds == correctRoundsExpected) {
+                System.out.printf(winMessage + "\n", usr);
+                return;
+            }
+        }
+
+        System.out.printf(loseMessage + "\n", usr);
+    }
 
 }
+

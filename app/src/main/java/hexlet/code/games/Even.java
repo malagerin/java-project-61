@@ -20,7 +20,7 @@ public class Even extends GameDummy {
     public String getNextQuestion() {
         int num = rnd.nextInt(1000);
         String question = Integer.toString(num);
-        correct = num % 2 == 0? "yes" : "no";
+        correct = num % 2 == 0 ? "yes" : "no";
 
         return question;
     }

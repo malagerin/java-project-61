@@ -13,25 +13,29 @@
 package hexlet.code;
 
 import java.util.Scanner;
-import hexlet.code.games.*;
+import hexlet.code.games.Even;
+import hexlet.code.games.Calc;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 
 public class App {
-    public static final boolean onlyCorrectRoundsAreTakenIntoAccount = false;
+    public static boolean onlyCorrectRounds = false;
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in); //input
         int res = 10;   //menu result storage
         String[] mainMenu = {
-                "Greet",
-                "Even",
-                "Calc",
-                "GCD",
-                "Progression",
-                "Prime"
+            "Greet",
+            "Even",
+            "Calc",
+            "GCD",
+            "Progression",
+            "Prime"
         }; //menu items storage
 
-        if (onlyCorrectRoundsAreTakenIntoAccount) {
+        if (onlyCorrectRounds) {
             Engine.onlyCorrectCounts();
         }
 
@@ -40,7 +44,7 @@ public class App {
             //one menu pass
             res = Cli.outputMenu(mainMenu,
                     "Please enter the game number and press Enter.",
-                    "Your choice is:","Exit",
+                    "Your choice is:", "Exit",
                     1, "\n >> Input incorrect, please reenter: ");
 
             //menu following

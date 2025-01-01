@@ -1,9 +1,6 @@
 package hexlet.code.games;
 
-import java.util.Random;
-import java.util.Scanner;
-
-public class Calc extends GameDummy{
+public class Calc extends GameDummy {
     @Override
 
     public String getPrompt() {
@@ -17,8 +14,7 @@ public class Calc extends GameDummy{
         int action = rnd.nextInt(3);
         String question = "";
 
-        switch (action)
-        {
+        switch (action) {
             case 0:
                 //addition
                 question = num1 + " + " + num2;

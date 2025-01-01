@@ -9,7 +9,7 @@ public class Progression extends GameDummy {
     @Override
     public String getNextQuestion() {
         int start = rnd.nextInt(20);
-        int step = rnd.nextInt(-10,20);
+        int step = rnd.nextInt(-10, 20);
         int length = rnd.nextInt(5, 20);
         int missing = rnd.nextInt(length);
         StringBuilder question = new StringBuilder("");
