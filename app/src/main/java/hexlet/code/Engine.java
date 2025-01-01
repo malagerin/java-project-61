@@ -12,6 +12,7 @@ public class Engine {
 	public static int roundsExpected = 3;
 	public static String winMessage = "Congratulations, %s!";
 	public static String loseMessage = "You lose, %s!";
+	public static String questionMessage = "Question:";
 	public static String prompt = "Your answer:";
 	public static String correctMessage = "Correct!";
 	public static String incorrectMessage = "'%s' is wrong answer ;(. Correct answer was '%s'";
@@ -34,7 +35,7 @@ public class Engine {
 		String expectedAnswer, userAnswer;
 
 		while (i-- != 0) {
-			System.out.println(Game.getNextQuestion());
+			System.out.println(questionMessage + " " + Game.getNextQuestion());
 			expectedAnswer = Game.getExpected();
 
 			System.out.print(prompt + " ");
