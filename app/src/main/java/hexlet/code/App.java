@@ -26,7 +26,8 @@ public class App {
                 "Greet",
                 "Even",
                 "Calc",
-                "GCD"
+                "GCD",
+                "Progression"
         }; //menu items storage
 
         if (onlyCorrectRoundsAreTakenIntoAccount) {
@@ -55,6 +56,8 @@ public class App {
                 case 4:
                     Engine.runGame(new GCD());
                     break;
+                case 5:
+                    Engine.runGame(new Progression());
                 default:
                     //No defaults for now
                     break;
